@@ -1,0 +1,126 @@
+body {
+    height: 100%;
+    font-family: 'Dosis', sans-serif;
+}
+
+section {
+    float:left;
+    width:50%;
+}
+
+h2{
+    text-align: center;
+}
+
+aside {
+    float:right;
+    width:50%;
+    text-align: center;
+    position: sticky;
+    top:0;
+  }
+
+  ol {
+    counter-reset: li;
+    list-style: none;
+    font: 15px;
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  }
+
+  ol ol {
+    margin: 0 0 0 2em;
+  }
+
+  .rounded-list li{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #ddd;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;
+  }
+
+  .rounded-list li:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #87ceeb;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+  }
+
+
+ol.rounded-list li
+{
+  margin-left:13%;
+}
+
+.btn-post {
+    background-color: #99FF99;
+    border-color: #66FF66;
+    border-radius: 12px;
+}
+
+.btn-post:active, .btn-post:focus, .btn-post:hover {
+    background-color: #66FF66!important;
+    border-color: #33FF33!important;
+}
+
+.btn-patch {
+    background-color: #99CCFF;
+    border-color: #66B2FF;
+    border-radius: 12px;
+}
+
+.btn-patch:active, .btn-patch:focus, .btn-patch:hover {
+    background-color: #66B2FF!important;
+    border-color: #3399FF!important;
+}
+
+.btn-del {
+    background-color: #FF9999;
+    border-color: #FF6666;
+}
+
+.btn-del:active, .btn-del:focus, .btn-del:hover {
+    background-color: #FF6666!important;
+    border-color: #FF3333!important;
+}
+
+.btn-dtl {
+  background-color: #FFFF99;
+  border-color: #FFFF66;
+  border-radius: 12px;
+}
+
+.btn-dtl:active, .btn-dtl:focus, .btn-dtl:hover {
+  background-color: #FFFF66!important;
+  border-color: #FFFF33!important;
+}
+
+input[type=text] {
+    width:200px;
+    padding: 2px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+input:focus{
+    outline: none;
+}
