@@ -6,17 +6,27 @@ import {
   Redirect
 } from 'react-router-dom'
 import HomePage from "./index"
-import DetailsPage from './details'
-
+import "bootstrap/dist/css/bootstrap.min.css";
 class App extends React.Component {
 
   
   render() {
     return <Router>
       <Switch>
+        <div> 
+          <div>
+        <nav className="navbar navbar-expand navbar-dark bg-dark">
+          <a href="/" className="navbar-brand">
+          User Contacts
+          </a>
+        </nav>
+        </div>
+
+        <div>
         <Route exact path="/" component={HomePage}/>
-        <Route exact path="/details" component={DetailsPage}/>
         <Redirect to="/" />
+        </div>
+        </div>
       </Switch>
     </Router>
   }

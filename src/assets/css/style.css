@@ -3,23 +3,26 @@ body {
     font-family: 'Dosis', sans-serif;
 }
 
+#menu {
+  float:left;
+  width:20%;
+}
+
 section {
     float:left;
-    width:50%;
+    width:80%;
 }
 
-h2{
+h3, h4{
     text-align: center;
 }
 
-aside {
-    float:right;
-    width:50%;
-    text-align: center;
-    position: sticky;
-    top:0;
-  }
+h5{
+  text-align: left;
+  padding: 10px;
+}
 
+/* 
   ol {
     counter-reset: li;
     list-style: none;
@@ -27,9 +30,6 @@ aside {
     padding: 0;
     margin-bottom: 4em;
     text-shadow: 0 1px 0 rgba(255,255,255,.5);
-  }
-
-  ol ol {
     margin: 0 0 0 2em;
   }
 
@@ -69,48 +69,19 @@ ol.rounded-list li
 {
   margin-left:13%;
 }
+*/
 
-.btn-post {
-    background-color: #99FF99;
-    border-color: #66FF66;
-    border-radius: 12px;
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 20px;
 }
 
-.btn-post:active, .btn-post:focus, .btn-post:hover {
-    background-color: #66FF66!important;
-    border-color: #33FF33!important;
-}
-
-.btn-patch {
-    background-color: #99CCFF;
-    border-color: #66B2FF;
-    border-radius: 12px;
-}
-
-.btn-patch:active, .btn-patch:focus, .btn-patch:hover {
-    background-color: #66B2FF!important;
-    border-color: #3399FF!important;
-}
-
-.btn-del {
-    background-color: #FF9999;
-    border-color: #FF6666;
-}
-
-.btn-del:active, .btn-del:focus, .btn-del:hover {
-    background-color: #FF6666!important;
-    border-color: #FF3333!important;
-}
-
-.btn-dtl {
-  background-color: #FFFF99;
-  border-color: #FFFF66;
-  border-radius: 12px;
-}
-
-.btn-dtl:active, .btn-dtl:focus, .btn-dtl:hover {
-  background-color: #FFFF66!important;
-  border-color: #FFFF33!important;
+.btn {
+  margin-left:5em;
+  float:right;
+  border-radius: 50px;
 }
 
 input[type=text] {

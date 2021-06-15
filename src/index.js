@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './components/App'
-import TAI from './assets/css/TAI.css'
+import './assets/css/style.css'
 
 ReactDOM.render(
   <React.StrictMode>
