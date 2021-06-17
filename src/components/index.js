@@ -158,7 +158,7 @@ class HomePage extends React.Component {
 
           <section>
           <h3>Users Contacts List</h3>
-          <ol class = "rounded-list">
+          <ol>
               {this.state.users.map(user =>
                   <li class="list-group-item list-group-item-action list-group-item-primary" key={user.user_id}>
                     <pre>{["Name: ", user.name, "          User ID: ", user.user_id]}
