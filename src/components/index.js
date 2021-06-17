@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const api = axios.create({
   baseURL: "http://localhost:8080/api/v1/",
@@ -19,11 +18,11 @@ class HomePage extends React.Component {
           ],
         },
       ],
-      user_id: null,
       name: "",
       contact_name: "",
       phone_number: "",
-      email_address: "",
+      email_address: "",      
+      user_id: null,
     };
   }
 
@@ -42,7 +41,7 @@ class HomePage extends React.Component {
       phone_number: this.state.phone_number,
       email_address: this.state.email_address,
     };
-    api.post(`/contacts/${this.state.user_id}`, data);
+    api.post("/contacts/" + this.state.user_id, data);
   };
 
   //get users
@@ -130,6 +129,13 @@ class HomePage extends React.Component {
   render() {
     return (
       <body> 
+                  <div>
+        <nav className="navbar navbar-expand navbar-dark bg-dark">
+          <a href="/" className="navbar-brand">
+          User Contacts
+          </a>
+        </nav>
+        </div>
         <section id="menu">
               <h3>Add and edit</h3>
               <button class = "btn btn-secondary" onClick={this.createUser}>Add user</button>
@@ -154,7 +160,6 @@ class HomePage extends React.Component {
           <h3>Users Contacts List</h3>
           <ol class = "rounded-list">
               {this.state.users.map(user =>
-             
                   <li class="list-group-item list-group-item-action list-group-item-primary" key={user.user_id}>
                     <pre>{["Name: ", user.name, "          User ID: ", user.user_id]}
                       <button class = "btn btn-secondary btn-sm" onClick={() => this.updateUser(user.user_id)}>Edit</button>
@@ -169,11 +174,9 @@ class HomePage extends React.Component {
                           )}
                       </ol>
                   </li>
-                
               )}
           </ol>
           </section>
-         
       </body>
     );
   }
